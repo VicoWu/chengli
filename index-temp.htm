@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/main.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+    <script>
+     $(function(){
+       $(".product ul>li").hover(function() {
+           $(this).children("ul").stop(true,true).slideDown();
+       }, function() {
+           $(this).children("ul").stop(true,true).slideUp();
+       });
+    })
+    </script>
+  </head>
+  <body>
+    {dede:include filename="head.htm"/}
+
+    <div class="content clearFix">
+      <div class="product-pic"> 
+        <img src="{dede:global.cfg_templets_skin/}/image/product-pic.png" alt="">
+      </div>
+      <!--左侧边栏-->
+      <div class="product">
+      <ul>
+        {dede:channelartlist typeid=12}
+        <li>
+          <a href="javascript:void(0)">{dede:field name='typename'/}</a>
+          <ul class="dropdown-menu">
+          {dede:sql sql='Select * from dede_arctype where reid=~id~ ORDER BY id'} 
+            <li>
+              <a href="[field:typedir function="cn_substr(@me,200,9) " /]">[field:typename/]</a>
+            </li>
+          {/dede:sql} 
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+      </div>
+      <!--中部-->
+      <div class="middle">
+        <div class="middle_1 clearFix">
+          <div class="show">
+            <div class="info">
+            <p>公司简介</p>
+            <p>程力专用汽车股份有限公司是国家发改委定点生产各类专用汽车的专业厂家，大型专用汽车制造集团。国内知名园林绿化、石油化工、市政环卫、压力容器专用汽车制造商。注册商标程力威牌，国家发改委汽车公告产品代码：CLW和SNJ。</p>
+            <p> 程力专用汽车有限公司是湖北程力集团的重要组成部分，也是湖北程力集团汽车板块主要支柱企业，注册商标程力威牌。是政府定点采购企业，也是国内唯一荣获“中国驰名商标”的专用汽车制造企业，其主导品种有洒水车、油罐车、垃圾车、吸粪吸污车、扫路车、清障车、高空作业车、消防车、冷藏车等100多个品种。</p>
+          </div>
+          <div class="hot">
+          <!--多层三级栏目中选取推荐 测试中-->
+            <p>热门产品</p>
+            <dl>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+              <dd><a href="#"><img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt=""><span>汽车</span></a></dd>
+            </dl>
+          </div>
+        </div>
+          <div class="schedule">
+            {dede:type typeid=21 }
+                <ul><p>[field:typename/] <span><a href="[field:typelink/]" >更多>></a></span> </p>{/dede:type} {dede:arclist titlelen='200' row='5' typeid='8'}
+                    <li><a href="[field:arcurl /]">[field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a></li>
+                    {/dede:arclist}
+                </ul>
+          </div>
+        </div>
+         <div class="middle_2 clearFix">
+            <div class="list float_l">
+               {dede:type typeid=15 }
+                <ul><p>[field:typename/] <span><a href="[field:typelink/]" >更多>></a></span> </p>{/dede:type} {dede:arclist titlelen='200' row='5' typeid='8'}
+                    <li><a href="[field:arcurl /]">[field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a><span>[field:pubdate function="GetDateMK(@me)"/]</span></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div class="list float_r">
+               {dede:type typeid=16 }
+                <ul><p>[field:typename/] <span><a href="[field:typelink/]" >更多>></a></span> </p>{/dede:type} {dede:arclist titlelen='200' row='5' typeid='8'}
+                    <li><a href="[field:arcurl /]">[field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a><span>[field:pubdate function="GetDateMK(@me)"/]</span></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+          </div>
+          <div class="middle_3 clearFix">
+            <!-- 留言板未添加 -->
+          </div>
+      </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>chengli</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/main.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="contact">
+            <div class="container">
+                <span class="contact-info">Tel：13269202703</span>
+                <span class="contact-info">QQ:583424568</span>
+                <span class="contact-info">E-mail:vico.wu1989@gmail.com</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <ul class="nav nav-pills container">
+                <li class="active"><a href='/'>首页</a></li>
+                <li><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
+                <li><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
+                <li><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
+                <li><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
+                <li><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
+                <li><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <img class="banner" src="{dede:global.cfg_templets_skin/}/image/banner.png" alt="">
+        </div>
+    </header>
+    <div class="container main">
+        <div class="row show-banner">
+            <img src="{dede:global.cfg_templets_skin/}/image/product-pic.png" alt="">
+        </div>
+        <div class="row">
+            <div class="product-show col-md-1">
+            {dede:channelartlist typeid=12}
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                          {dede:field name='typename'/}
+                        </a>
+                        <ul class="dropdown-menu">
+                            {dede:sql sql='Select * from dede_arctype where reid=~id~ ORDER BY id'}
+                            <li><a href="[field:typedir function="cn_substr(@me,200,9) " /]" data-html="产品详情.htm">[field:typename/]</a></li>
+                            {/dede:sql} 
+                        </ul>
+                    </li>
+                    <!-- <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                          垃圾车
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" data-html="产品详情.htm">1-3t</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                          消防车
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" data-html="产品详情.htm">1-3t</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                {/dede:channelartlist}
+            </div>
+            <div class="main-content col-md-11">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="introduce row">
+                            <div class="title">公司简介</div>
+                            <div class="content">
+                                <p>程力专用汽车股份有限公司是国家发改委定点生产各类专用汽车的专业厂家，大型专用汽车制造集团。国内知名园林绿化、石油化工、市政环卫、压力容器专用汽车制造商。注册商标程力威牌，国家发改委汽车公告产品代码：CLW和SNJ。</p>
+                                <p> 程力专用汽车有限公司是湖北程力集团的重要组成部分，也是湖北程力集团汽车板块主要支柱企业，注册商标程力威牌。是政府定点采购企业，也是国内唯一荣获“中国驰名商标”的专用汽车制造企业，其主导品种有洒水车、油罐车、垃圾车、吸粪吸污车、扫路车、清障车、高空作业车、消防车、冷藏车等100多个品种。</p>
+                            </div>
+                        </div>
+                        <div class="hot-product row">
+                            <div class="title">热门产品</div>
+                            <ul class="product-list">
+                            <!-- 热门调用未完成，产品为图集，此处调用title和第一个图片 -->
+                            <!-- {dede:arclist typeid='12' row='6' titlelen='200' orderby='click'}
+                                <li></li>
+                            {/dede:arclist} -->
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/test1.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/test2.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/test1.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                        <div class="img-wrap">
+                                            <img src="{dede:global.cfg_templets_skin/}/image/test2.jpg" alt="">
+                                        </div>
+                                        <span>汽车</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="sale-list">
+                        {dede:arclist titlelen='200' row='6' typeid='21'}
+                            <li><a href="[field:arcurl /]"> [field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a> <span></li>
+                        {/dede:arclist}
+                           <!--  <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
+                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
+                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
+                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
+                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 news">
+                        <div class="title">公司大事</div>
+                        <ul class="article-list">
+                        {dede:arclist  titlelen='200' row='6' typeid='15'}
+                            <li>
+                                <a href="[field:arcurl /]">[field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a>
+                                <span class="date pull-right">[field:pubdate function="GetDateMK(@me)"/]</span>
+                            </li>
+                        {/dede:arclist}
+                           <!--  <li>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="col-md-6 cars-info">
+                        <div class="title">车辆信息</div>
+                        <ul class="article-list">
+                            <li>
+                                <a href="">湖北鄂州周总不畏酷热天气来程力专用汽车股</a>
+                                <span class="daten pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">湖北鄂州周总不畏酷热天气来程力专用汽车股</a>
+                                <span class="daten pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">湖北鄂州周总不畏酷热天气来程力专用汽车股</a>
+                                <span class="daten pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">湖北鄂州周总不畏酷热天气来程力专用汽车股</a>
+                                <span class="daten pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <a href="">湖北鄂州周总不畏酷热天气来程力专用汽车股</a>
+                                <span class="daten pull-right">2016-6-20</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">热门问答</div>
+                        <ul class="article-list">
+                            <li>
+                                <span class="answer-id">12334</span>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <span class="answer-id">12334</span>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <span class="answer-id">12334</span>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                            <li>
+                                <span class="answer-id">12334</span>
+                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
+                                <span class="date pull-right">2016-6-20</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="product-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">产品详情</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row footer-info">
+            <p>这里是尾部的介绍信息具体什么内容还不清楚这里多写几个字占位置</p>
+        </div>
+        <p>copyright@2016</p>
+    </footer>
+</body>
+
+</html>

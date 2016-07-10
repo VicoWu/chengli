@@ -1,0 +1,152 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+[class*=col-] {
+  padding: 0;
+}
+[class*=col-] + [class*=col-] {
+  padding-left: 15px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+header {
+  position: relative;
+}
+header .contact {
+  font-size: 16px;
+  line-height: 45px;
+  background-color: #eee;
+}
+header .contact .contact-info {
+  font-weight: bold;
+}
+header .contact .contact-info + .contact-info {
+  margin-left: 10px;
+}
+header .nav {
+  padding-left: 15px;
+}
+header .nav > li.active > a {
+  color: #337ab7;
+  background-color: transparent;
+}
+header .nav > li > a {
+  color: #333;
+}
+header .banner {
+  width: 100%;
+}
+.main {
+  margin-top: 15px;
+}
+.main .show-banner {
+  margin-bottom: 15px;
+}
+.main .product-show .dropdown-menu {
+  left: 100%;
+  top: 0;
+}
+.main .product-show .nav > li {
+  width: 100%;
+  margin-left: 0;
+}
+.main .product-show .nav > li > a {
+  font-size: 16px;
+  text-align: center;
+  border-radius: 0;
+}
+.main .main-content .row .title {
+  line-height: 40px;
+  font-size: 16px;
+  background-color: #eee;
+  padding-left: 15px;
+}
+.main .main-content .row .content {
+  padding: 10px;
+  text-indent: 2em;
+}
+.main .main-content .sale-list li {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.main .main-content .sale-list li + li {
+  margin-top: 10px;
+}
+.main .main-content .article-list {
+  padding-bottom: 10px;
+}
+.main .main-content .article-list li {
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #eee;
+  margin-top: -1px;
+}
+.main .main-content .article-list .answer-id {
+  margin-right: 10px;
+}
+.product-list {
+  overflow: hidden;
+  margin: 0 -10px;
+}
+.product-list li {
+  padding: 10px;
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  overflow: hidden;
+  position: relative;
+}
+.product-list li a {
+  display: block;
+  text-align: center;
+}
+.product-list li .img-wrap {
+  height: 200px;
+  line-height: 200px;
+  overflow: hidden;
+  vertical-align: middle;
+  background: #eee;
+  box-shadow: 0 0 3px #AFAFAF;
+}
+.product-list li img {
+  max-width: 100%;
+}
+.product-detail .pic-show-big {
+  width: 100%;
+}
+.product-detail .product-list li {
+  width: 25%;
+}
+.product-detail .product-list li .img-wrap {
+  height: 100px;
+  line-height: 100px;
+}
+.product-detail .mask {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product-detail .active .mask {
+  display: none;
+}
+.column-content {
+  border: 1px solid #ddd;
+}
+footer {
+  text-align: center;
+}

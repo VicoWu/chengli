@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>chengli</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="contact">
+            <div class="container">
+                <span class="contact-info">Tel：13269202703</span>
+                <span class="contact-info">QQ:583424568</span>
+                <span class="contact-info">E-mail:vico.wu1989@gmail.com</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <ul class="nav nav-pills container">
+                <li class="active"><a href='/'>首页</a></li>
+                <li><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
+                <li><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
+                <li><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
+                <li><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
+                <li><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
+                <li><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <img class="banner" src="./image/banner.png" alt="">
+        </div>
+    </header>
+    <div class="container main">
+        <div class="row show-banner">
+            <img src="./image/product-pic.png" alt="">
+        </div>
+        <div class="row">
+            <div class="product-show col-md-1">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          洒水车
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1-3t</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          垃圾车
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1-3t</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          消防车
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1-3t</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content col-md-11">
+                <div class="product row">
+                    <div class="title">
+                        <select name="priceOrder" id="">
+                            <option value="0">价格从低到高</option>
+                            <option value="0">价格从高到低</option>
+                        </select>
+                        <select name="salesOrder" id="">
+                            <option value="0">销量从低到高</option>
+                            <option value="0">销量从高到低</option>
+                        </select>
+                    </div>
+                    <ul class="product-list">
+                        <li>
+                            <a href="javascript:void(0)" data-html="产品详情.htm">
+                                <div class="img-wrap">
+                                    <img src="./image/u52.jpg" alt="">
+                                </div>
+                                <span>汽车</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-html="产品详情.htm">
+                                <div class="img-wrap">
+                                    <img src="./image/test1.jpg" alt="">
+                                </div>
+                                <span>汽车</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-html="产品详情.htm">
+                                <div class="img-wrap">
+                                    <img src="./image/test2.jpg" alt="">
+                                </div>
+                                <span>汽车</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="product-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">产品详情</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row footer-info">
+            <p>这里是尾部的介绍信息具体什么内容还不清楚这里多写几个字占位置</p>
+        </div>
+        <p>copyright@2016</p>
+    </footer>
+</body>
+
+</html>
